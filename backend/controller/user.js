@@ -11,7 +11,9 @@ const sendMail = require("../utils/sendMail");
 const sendToken = require("../utils/jwtToken");
 const { isAuthenticated, isAdmin } = require("../middleware/auth");
 
-
+router.get('/',(req,res)=>{
+  res.json("this is foodikha")
+})
 
 // create user
 router.post("/create-user", async (req, res, next) => {
