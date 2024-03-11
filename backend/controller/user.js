@@ -11,7 +11,7 @@ const sendMail = require("../utils/sendMail");
 const sendToken = require("../utils/jwtToken");
 const { isAuthenticated, isAdmin } = require("../middleware/auth");
 
-router.get('/',(req,res)=>{
+router.get('/home',(req,res)=>{
   res.json("this is foodikha")
 })
 
