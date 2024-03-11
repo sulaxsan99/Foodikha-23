@@ -13,7 +13,7 @@ const { isAuthenticated, isAdmin } = require("../middleware/auth");
 const cloudinary = require("cloudinary");
 
 
-router.get('/home',(req,res)=>{
+router.get('/',(req,res)=>{
   res.json("this is foodikha")
 })
 

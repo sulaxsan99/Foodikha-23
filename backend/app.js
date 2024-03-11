@@ -50,9 +50,6 @@ app.use("/api/event", event);
 app.use("/api/coupon", coupon);
 app.use("/api/withdraw", withdraw);
 
-app.get("/",(req,res)=>{
-res.send("jkfdsbfhsdj")
-})
 // it's for ErrorHandling
 app.use(ErrorHandler);
 
