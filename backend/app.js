@@ -17,7 +17,10 @@ app.use(
   credentials:true, 
 })
 );
-app.use("/", express.static("uploads"))
+// app.use("/", express.static("uploads"))
+app.use("/test", (req, res) => {
+  res.send("Hello world!");
+});
 app.use(bodyParser.urlencoded({extended : true,limits : "50mb"}));
 
 // config
@@ -35,7 +38,7 @@ const order = require("./controller/order");
 const product = require("./controller/product");
 const event = require("./controller/event");
 const coupon = require("./controller/coupounCode");
-
+const withdraw = require("./controller/withdraw");
 
 
 app.use("/api/user", user);
@@ -45,12 +48,11 @@ app.use("/api/order", order);
 app.use("/api/product", product);
 app.use("/api/event", event);
 app.use("/api/coupon", coupon);
-app.get('/',(req,res)=>{
-  res.json("this is foodikha")
+app.use("/api/withdraw", withdraw);
+
+app.get("/",(req,res)=>{
+res.send("jkfdsbfhsdj")
 })
-
-
-
 // it's for ErrorHandling
 app.use(ErrorHandler);
 
