@@ -45,7 +45,9 @@ app.use("/api/order", order);
 app.use("/api/product", product);
 app.use("/api/event", event);
 app.use("/api/coupon", coupon);
-
+app.get('/',(req,res)=>{
+  res.json("this is foodikha")
+})
 
 
 
